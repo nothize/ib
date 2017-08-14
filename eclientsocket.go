@@ -134,6 +134,15 @@ const (
 	mStartAPI                                     = 71
 )
 
+type MarketDataTypeConst int64
+
+const (
+	MarketDataTypeRealtime      MarketDataTypeConst = 1
+	MarketDataTypeFrozen                            = 2
+	MarketDataTypeDelayed                           = 3
+	MarketDataTypeDelayedFrozen                     = 4
+)
+
 type serverHandshake struct {
 	version int64
 	time    time.Time
